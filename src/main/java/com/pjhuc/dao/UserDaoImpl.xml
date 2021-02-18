@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pjhuc.dao.UserDao">
+
+    <!-- #############################  第一种  #################################-->
+    <!-- 映射关系配置   javabean  sql 语句查询结果 的 映射关系-->
+    <resultMap id="ub" type="com.pjhuc.bean.UserBean" >
+        <result property="userId" column="id"></result>
+        <result property="userName" column="name"></result>
+        <result property="userPs" column="userps"></result>
+        <result property="userAge" column="age"></result>
+    </resultMap>
+    <!-- 登录 -->
+    <select id="login" parameterType="com.pjhuc.bean.ParamBean" resultMap="ub">
+        select * from  user  where name =#{userName}  and  userps =#{userPs}
+    </select>
+
+    <!-- #############################  第二种  #################################-->
+    <!--    <select id="login" parameterType="com.pjhuc.bean.ParamBean" resultType="com.pjhuc.bean.UserBean" >
+            select id userId,name userName,userps userPs,age userAge from  user  where name =#{userName}  and  userps =#{userPs}
+        </select>-->
+
+</mapper>
