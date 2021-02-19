@@ -21,4 +21,21 @@
             select id userId,name userName,userps userPs,age userAge from  user  where name =#{userName}  and  userps =#{userPs}
         </select>-->
 
+    <!-- 得到所有的用户类型 -->
+    <select id="userinfo" resultMap="ub">
+        select * from user
+    </select>
+
+    <select id="getUserById" parameterType="int" resultMap="ub">
+        select * from user where id = #{id}
+    </select>
+
+    <update id="updateUser" parameterType="com.pjhuc.bean.UserBean">
+        update user set name=#{userName},userps=#{userPs},age=#{userAge} where id = #{userId}
+    </update>
+    
+    <delete id="deleteUser" parameterType="Integer">
+        delete from user where id = #{id}
+    </delete>
+
 </mapper>

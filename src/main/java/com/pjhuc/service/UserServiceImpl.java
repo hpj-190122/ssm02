@@ -5,6 +5,8 @@ import com.pjhuc.bean.UserBean;
 import com.pjhuc.dao.UserDao;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService{
 
@@ -12,6 +14,26 @@ public class UserServiceImpl implements UserService{
 
     public UserDao getUd() {
         return ud;
+    }
+
+    @Override
+    public List userinfo() {
+        return ud.userinfo();
+    }
+
+    @Override
+    public UserBean getUserById(int id) {
+        return ud.getUserById(id);
+    }
+
+    @Override
+    public void updateUser(UserBean ub) {
+        ud.updateUser(ub);
+    }
+
+    @Override
+    public void deleteUser(int id) {
+        ud.deleteUser(id);
     }
 
     public void setUd(UserDao ud) {
@@ -22,5 +44,7 @@ public class UserServiceImpl implements UserService{
         ParamBean params = new ParamBean(username,userps);
         return ud.login(params);
     }
+
+
 
 }
