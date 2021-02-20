@@ -13,5 +13,6 @@ public interface UserService {
     public UserBean getUserById(int id);
     public void updateUser(UserBean ub);
     public void deleteUser(int id);
+    public void insertUser(UserBean ub);
 
 }

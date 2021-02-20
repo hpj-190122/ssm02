@@ -36,6 +36,11 @@ public class UserServiceImpl implements UserService{
         ud.deleteUser(id);
     }
 
+    @Override
+    public void insertUser(UserBean ub) {
+        ud.insertUserDao(ub);
+    }
+
     public void setUd(UserDao ud) {
         this.ud = ud;
     }

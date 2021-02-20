@@ -44,5 +44,10 @@ public class UserController {
         return this.userinfo(m);
     }
 
+    @RequestMapping(value="insertuser.do")
+    public String insertUser(UserBean ub,Model m) {
+        us.insertUser(ub);
+        return this.userinfo(m);
+    }
 
 }

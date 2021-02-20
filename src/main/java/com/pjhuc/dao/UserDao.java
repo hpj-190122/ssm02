@@ -12,5 +12,6 @@ public interface UserDao {
     public UserBean getUserById(int id);
     public void updateUser(UserBean ub);
     public void deleteUser(int id);
+    public void insertUserDao(UserBean ub);
 
 }

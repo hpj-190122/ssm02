@@ -38,4 +38,8 @@
         delete from user where id = #{id}
     </delete>
 
+    <insert id="insertUserDao" parameterType="com.pjhuc.bean.UserBean" >
+        insert into user (name,userps,age) values(#{userName},#{userPs},#{userAge})
+    </insert>
+
 </mapper>

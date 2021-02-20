@@ -21,6 +21,7 @@
             <a href="/ssm02/user/pupdate.do?userId=${u.userId }">修改</a>
                 <%--<a href="user/login.do">修改</a>--%>
                 <a href="/ssm02/user/deleteuser.do?userId=${u.userId }">删除</a>
+                <a href="/ssm02/jsp/insert.jsp">新增</a>
         </td>
         </C:forEach>
     </tr>
