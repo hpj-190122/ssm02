@@ -8,6 +8,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+/**
+ * git force push 如果git要强制覆盖
+ * 意思是 如果和别人的代码有冲突，而以自己的代码为准的话，就 force push
+ */
 
 import java.util.List;
 
